@@ -1,0 +1,13 @@
+.borderIt {
+  border: 1px black solid;
+  padding: 1em;
+  margin-bottom: 1em;
+}
+
+input {
+  margin: 1em 1em 1em 1em;
+}
+
+button {
+  margin: 0 1em 1em 1em;
+}

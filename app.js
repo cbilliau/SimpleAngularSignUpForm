@@ -1,8 +1,8 @@
 var app = angular.module('signupApp', []);
 
-app.directive('yoYo', function() {
+app.directive('signUp', function() {
 	return {
-		templateUrl: 'yo-template.html',
-		restrict: 'AE',
+		templateUrl: 'signup-template.html',
+		restrict: 'E',
 	};
 });
