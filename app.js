@@ -1,8 +1,10 @@
-var app = angular.module('signupApp', []);
+var app = angular.module('optInApp', []);
 
-app.directive('signUp', function() {
-	return {
-		templateUrl: 'signup-template.html',
-		restrict: 'E',
-	};
+app.directive('optIn', function() {
+    return {
+        restrict: 'E',
+        transclude: true,
+        templateUrl: 'optIn-template.html',
+        replace: true
+    };
 });

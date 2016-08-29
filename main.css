@@ -1,13 +1,21 @@
 .borderIt {
-  border: 1px black solid;
-  padding: 1em;
-  margin-bottom: 1em;
+    border: 1px black solid;
+    padding: 1em;
+    margin-bottom: 1em;
+    display: block;
+}
+
+.brand-logo {
+    background-image: url("./Acme-logo.gif");
+    background-size: cover;
+    height: 200px;
+    width: 200px;
 }
 
 input {
-  margin: 1em 1em 1em 1em;
+    margin: 0 1em 1em 1em;
 }
 
 button {
-  margin: 0 1em 1em 1em;
+    margin: 0 1em 1em 1em;
 }
