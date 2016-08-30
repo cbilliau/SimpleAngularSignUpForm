@@ -4,22 +4,29 @@
     </div>
     <div class="row borderIt">
         <div class="col-md-3" ng-transclude>
-  <p>imgae here</p>
+            <!-- transcluded image from index.html -->
         </div>
         <div class="col-md-9">
-            <form action="" class="form-group">
+            <!-- Form -->
+            <form name="optinForm" action="" class="form-group">
                 <div class="form-group form-group-lg">
-                    <input type="text" class="form-control" placeholder="First Name">
-                    <input type="text" class="form-control" placeholder="Last Name">
-                </div>
-                <div class="form-group form-group-lg">
-                    <input type="text" class="form-control" placeholder="Email">
-                    <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+                    <!-- Simple form validation & name input-->
+                    <span ng-show="optinForm.firstName.$touched && optinForm.firstName.$invalid">The first name is required (no numbers).</span>
+                    <!-- Name input -->
+                    <input name="firstName" ng-model="firstName" ng-pattern="/^[a-zA-Z\s]*$/" type="text" class="form-control" placeholder="First Name" required>
+                    <span ng-show="optinForm.lastName.$touched && optinForm.lastName.$invalid">The last name is required (no numbers).</span>
+                    <input name="lastName" ng-model="lastName" ng-pattern="/^[a-zA-Z\s]*$/" type="text" class="form-control" placeholder="Last Name" required>
+                    <!-- email input -->
+                    <span ng-show="optinForm.enterEmail.$touched && optinForm.enterEmail.$invalid">The email is required.</span>
+                    <input name="enterEmail" ng-model="enterEmail" type="email" class="form-control" placeholder="Email" required>
+                    <!-- button -->
+                    <button ng-disabled="optinForm.$invalid" type="submit" class="btn btn-primary btn-lg">Submit</button>
                 </div>
             </form>
         </div>
     </div>
     <div class="row borderIt">
-        <p>Labore voluptate sit sit nostrud aute consequat enim ea ad cupidatat nisi. Laboris veniam et quis eiusmod officia et consectetur voluptate veniam officia nostrud. Dolor consequat nisi voluptate id sit dolore laborum eu qui proident laborum do sunt ipsum. Nulla reprehenderit enim quis fugiat reprehenderit mollit anim et elit commodo laborum ullamco.</p>
+        <p>Labore voluptate sit sit nostrud aute consequat enim ea ad cupidatat nisi. Laboris veniam et quis eiusmod officia et consectetur voluptate veniam officia nostrud. Dolor consequat nisi voluptate id sit dolore laborum eu qui proident laborum do
+            sunt ipsum. Nulla reprehenderit enim quis fugiat reprehenderit mollit anim et elit commodo laborum ullamco.</p>
     </div>
 </div>
